@@ -63,6 +63,16 @@ namespace GestionArticulos.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap articulos_de_compra {
+            get {
+                object obj = ResourceManager.GetObject("articulos-de-compra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap verde {
             get {
                 object obj = ResourceManager.GetObject("verde", resourceCulture);

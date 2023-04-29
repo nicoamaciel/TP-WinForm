@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace GestionArticulos.Presentacion
 {
-    public partial class MenuPrincipal : Form
+    public partial class ListarArticulos : Form
     {
-        public MenuPrincipal()
+        public ListarArticulos()
         {
             InitializeComponent();
-        }
-
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-            ListarArticulos ventana = new ListarArticulos();
-            ventana.ShowDialog();
         }
     }
 }
