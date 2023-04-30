@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Catalogo;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,29 @@ namespace GestionArticulos.Presentacion
 
         private void btnListar_Click(object sender, EventArgs e)
         {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(listarArticulos))
+                {
+                    return;
+                }
+            }
             ListarArticulos ventana = new ListarArticulos();
-            ventana.ShowDialog();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
+
+        private void btnBuscarArticulos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregarArticulos_Click(object sender, EventArgs e)
+        {
+            AgregarArticulo agregar = new AgregarArticulo();
+            agregar.ShowDialog();
+           // cargar();
+
         }
     }
 }

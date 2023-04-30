@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
+    <Compile Include="ListarMarcas.cs" />
+    <Compile Include="ListarCategorias.cs" />
     <Compile Include="listarArticulos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

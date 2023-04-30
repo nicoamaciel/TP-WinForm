@@ -45,11 +45,9 @@ namespace GestionArticulos.Presentacion
             this.btnAgregarArticulos = new System.Windows.Forms.Button();
             this.btnBuscarArticulos = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
-            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panelBotones.SuspendLayout();
-            this.panelPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -202,6 +200,7 @@ namespace GestionArticulos.Presentacion
             this.btnAgregarArticulos.TabIndex = 5;
             this.btnAgregarArticulos.Text = "Agregar Articulos";
             this.btnAgregarArticulos.UseVisualStyleBackColor = false;
+            this.btnAgregarArticulos.Click += new System.EventHandler(this.btnAgregarArticulos_Click);
             // 
             // btnBuscarArticulos
             // 
@@ -219,6 +218,7 @@ namespace GestionArticulos.Presentacion
             this.btnBuscarArticulos.TabIndex = 1;
             this.btnBuscarArticulos.Text = "Buscar Articulos";
             this.btnBuscarArticulos.UseVisualStyleBackColor = false;
+            this.btnBuscarArticulos.Click += new System.EventHandler(this.btnBuscarArticulos_Click);
             // 
             // btnListar
             // 
@@ -238,25 +238,18 @@ namespace GestionArticulos.Presentacion
             this.btnListar.UseVisualStyleBackColor = false;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // panelPrincipal
-            // 
-            this.panelPrincipal.Controls.Add(this.label1);
-            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipal.Location = new System.Drawing.Point(124, 24);
-            this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(676, 426);
-            this.panelPrincipal.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label1.Location = new System.Drawing.Point(281, 335);
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.label1.Location = new System.Drawing.Point(124, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(392, 76);
-            this.label1.TabIndex = 0;
+            this.label1.Size = new System.Drawing.Size(391, 76);
+            this.label1.TabIndex = 3;
             this.label1.Text = "Bienvendio!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MenuPrincipal
             // 
@@ -264,19 +257,19 @@ namespace GestionArticulos.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panelPrincipal);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panelBotones.ResumeLayout(false);
-            this.panelPrincipal.ResumeLayout(false);
-            this.panelPrincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,7 +287,6 @@ namespace GestionArticulos.Presentacion
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutMeToolStripMenuItem;
         private System.Windows.Forms.Panel panelBotones;
-        private System.Windows.Forms.Panel panelPrincipal;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Button btnVerDetalles;
         private System.Windows.Forms.Button btnEliminarArticulos;
