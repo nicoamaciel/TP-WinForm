@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace AccesoDatos
@@ -19,7 +20,7 @@ namespace AccesoDatos
 
         public AccesDatos()
         {
-            conexion = new SqlConnection("server=localhost; DataBase=CATALOGO_P3_DB; user=sa; password=123456 ");
+            conexion = new SqlConnection(@"server=localhost; DataBase=CATALOGO_P3_DB; user=sa; password=123456 ");
             comando = new SqlCommand();
         }
 

@@ -60,11 +60,11 @@ namespace GestionArticulos.Presentacion
 
         private void AgregarArticulo_Load(object sender, EventArgs e)
         {
-            ListarCategorias cate = new ListarCategorias();
+            ListarCategorias Cat = new ListarCategorias();
             ListarMarcas Marcas = new ListarMarcas();
             try
             {
-                CB_Categoria.DataSource = cate.listar();
+                CB_Categoria.DataSource = Cat.listar();
                 CB_Categoria.ValueMember = "Id";
                 CB_Categoria.DisplayMember = "Descripcion";
                 CB_Marca.DataSource = Marcas.listar();

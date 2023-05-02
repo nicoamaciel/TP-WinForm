@@ -17,7 +17,7 @@ namespace Catalogo
 
             try
             {
-                datos.setearConsulta("Select Id, Descripcion From ELEMENTOS");
+                datos.setearConsulta("Select Id, Descripcion From MARCAS");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())

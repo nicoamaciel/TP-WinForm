@@ -21,8 +21,8 @@ namespace Catalogo
             AccesDatos datos = new AccesDatos();
             try
             {
-                datos.setearConsulta("select A.Id,Codigo,Nombre,A.Descripcion,A.IdMarca,A.IdCategoria,Precio," +
-                    "C.Descripcion,M.Descripcion from ARTICULOS A, CATEGORIAS C, MARCAS M WHERE A.IdCategoria=C.Id and A.IdMarca=M.Id");
+                datos.setearConsulta("select A.Id,Codigo,Nombre,A.Descripcion,Precio," +
+                    "C.Id,C.Descripcion,M.Id,M.Descripcion from ARTICULOS as A, CATEGORIAS as C, MARCAS as M WHERE A.IdCategoria=C.Id and A.IdMarca=M.Id");
                 datos.ejecutarLectura();
 
                 
@@ -36,12 +36,11 @@ namespace Catalogo
                     aux.Precio = (decimal)datos.Lector["Precio"];
 
                     aux.Categoria = new Categorias();
-                    aux.Categoria.ID = (int)datos.Lector["IDCategoria"];
-                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
+                    aux.Categoria.ID = (int)datos.Lector["Id"];
+                    aux.Categoria.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Marca = new Marcas();
-                    aux.Marca.ID = (int)datos.Lector["IdMarca"];
-                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
-
+                    aux.Marca.ID = (int)datos.Lector["Id"];
+                    aux.Marca.Descripcion = (string)datos.Lector["Descripcion"];
 
                     lista.Add(aux);
                 }
