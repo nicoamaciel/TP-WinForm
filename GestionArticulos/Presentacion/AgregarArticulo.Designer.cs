@@ -59,6 +59,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(48, 47);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(224, 13);
@@ -68,6 +69,7 @@
             // labelPrecio
             // 
             this.labelPrecio.AutoSize = true;
+            this.labelPrecio.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelPrecio.Location = new System.Drawing.Point(71, 221);
             this.labelPrecio.Name = "labelPrecio";
             this.labelPrecio.Size = new System.Drawing.Size(37, 13);
@@ -77,6 +79,7 @@
             // labelCategoria
             // 
             this.labelCategoria.AutoSize = true;
+            this.labelCategoria.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelCategoria.Location = new System.Drawing.Point(71, 168);
             this.labelCategoria.Name = "labelCategoria";
             this.labelCategoria.Size = new System.Drawing.Size(52, 13);
@@ -86,6 +89,7 @@
             // labelCodigo
             // 
             this.labelCodigo.AutoSize = true;
+            this.labelCodigo.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelCodigo.Location = new System.Drawing.Point(71, 92);
             this.labelCodigo.Name = "labelCodigo";
             this.labelCodigo.Size = new System.Drawing.Size(40, 13);
@@ -95,6 +99,7 @@
             // labelMarca
             // 
             this.labelMarca.AutoSize = true;
+            this.labelMarca.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelMarca.Location = new System.Drawing.Point(71, 195);
             this.labelMarca.Name = "labelMarca";
             this.labelMarca.Size = new System.Drawing.Size(37, 13);
@@ -104,6 +109,7 @@
             // labelNombre
             // 
             this.labelNombre.AutoSize = true;
+            this.labelNombre.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelNombre.Location = new System.Drawing.Point(71, 118);
             this.labelNombre.Name = "labelNombre";
             this.labelNombre.Size = new System.Drawing.Size(47, 13);
@@ -148,6 +154,7 @@
             // labelDescripcion
             // 
             this.labelDescripcion.AutoSize = true;
+            this.labelDescripcion.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.labelDescripcion.Location = new System.Drawing.Point(71, 144);
             this.labelDescripcion.Name = "labelDescripcion";
             this.labelDescripcion.Size = new System.Drawing.Size(63, 13);
@@ -183,6 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.CB_Marca);
             this.Controls.Add(this.CB_Categoria);

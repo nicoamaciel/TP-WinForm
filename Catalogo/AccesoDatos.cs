@@ -20,7 +20,7 @@ namespace AccesoDatos
 
         public AccesDatos()
         {
-            conexion = new SqlConnection(@"server=localhost; DataBase=CATALOGO_P3_DB; user=sa; password=123456 ");
+            conexion = new SqlConnection("server=.\\SQLEXPRESS; DataBase=CATALOGO_P3_DB; integrated security=true;");
             comando = new SqlCommand();
         }
 
