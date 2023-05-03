@@ -28,8 +28,7 @@ namespace GestionArticulos.Presentacion
                 }
             }
             ListarArticulos ventana = new ListarArticulos();
-            ventana.MdiParent = this;
-            ventana.Show();
+            ventana.ShowDialog();
         }
 
         private void btnBuscarArticulos_Click(object sender, EventArgs e)

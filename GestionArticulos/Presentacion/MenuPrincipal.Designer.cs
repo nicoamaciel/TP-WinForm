@@ -246,7 +246,7 @@ namespace GestionArticulos.Presentacion
             this.label1.ImageAlign = System.Drawing.ContentAlignment.BottomRight;
             this.label1.Location = new System.Drawing.Point(124, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(391, 76);
+            this.label1.Size = new System.Drawing.Size(392, 76);
             this.label1.TabIndex = 3;
             this.label1.Text = "Bienvendio!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -260,7 +260,6 @@ namespace GestionArticulos.Presentacion
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelBotones);
             this.Controls.Add(this.menuStrip1);
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MenuPrincipal";
