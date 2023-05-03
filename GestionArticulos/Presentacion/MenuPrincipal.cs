@@ -34,6 +34,8 @@ namespace GestionArticulos.Presentacion
 
         private void btnBuscarArticulos_Click(object sender, EventArgs e)
         {
+            BuscarArticulo bsq = new BuscarArticulo();
+            bsq.ShowDialog();
 
         }
 
