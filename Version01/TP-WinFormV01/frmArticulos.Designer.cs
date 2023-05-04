@@ -67,6 +67,7 @@ namespace TP_WinFormV01
             this.txtArticulos.Name = "txtArticulos";
             this.txtArticulos.Size = new System.Drawing.Size(181, 20);
             this.txtArticulos.TabIndex = 4;
+            this.txtArticulos.TextChanged += new System.EventHandler(this.txtArticulos_TextChanged);
             // 
             // panel1
             // 
@@ -86,6 +87,7 @@ namespace TP_WinFormV01
             this.label1.Size = new System.Drawing.Size(113, 25);
             this.label1.TabIndex = 8;
             this.label1.Text = "Listar todo";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 

@@ -41,5 +41,15 @@ namespace TP_WinFormV01
             dgvBuscarArt.DataSource = null;
             dgvBuscarArt.DataSource = listaArticulos;
         }
+
+        private void txtArticulos_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -30,6 +30,13 @@ namespace Catalogo
             comando.CommandText = consulta;
         }
 
+        public SqlCommand Comando
+        {
+            get { return comando; }
+            set { comando = value; }
+        }
+
+
         public void ejecutarLectura()
         {
             comando.Connection = conexion;
