@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33423.256
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion", "TP-WinFormV01\Presentacion.csproj", "{0732AD70-8D5D-48BC-AE9D-CD87AA3953CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dominio", "Dominio\Dominio.csproj", "{2DF1BFCB-C828-4212-AFAE-3D0D1ECFD1C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalogo", "Catalogo\Catalogo.csproj", "{16EC6E65-9C96-42C7-93CC-E3E5E3672698}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0732AD70-8D5D-48BC-AE9D-CD87AA3953CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0732AD70-8D5D-48BC-AE9D-CD87AA3953CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0732AD70-8D5D-48BC-AE9D-CD87AA3953CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0732AD70-8D5D-48BC-AE9D-CD87AA3953CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF1BFCB-C828-4212-AFAE-3D0D1ECFD1C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF1BFCB-C828-4212-AFAE-3D0D1ECFD1C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF1BFCB-C828-4212-AFAE-3D0D1ECFD1C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF1BFCB-C828-4212-AFAE-3D0D1ECFD1C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16EC6E65-9C96-42C7-93CC-E3E5E3672698}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16EC6E65-9C96-42C7-93CC-E3E5E3672698}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16EC6E65-9C96-42C7-93CC-E3E5E3672698}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16EC6E65-9C96-42C7-93CC-E3E5E3672698}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A752B205-53D1-45EA-A658-5FC948B538B2}
+	EndGlobalSection
+EndGlobal
