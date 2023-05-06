@@ -3,10 +3,10 @@ using System.Windows.Forms.VisualStyles;
 
 namespace TP_WinFormV01
 {
-    partial class frmMenuPrincipal
+    partial class frmBienvenida
     {
 
-   
+
 
 
 
@@ -49,11 +49,10 @@ namespace TP_WinFormV01
             this.devToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnArticulos = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -131,12 +130,12 @@ namespace TP_WinFormV01
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft New Tai Lue", 48F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft New Tai Lue", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Transparent;
-            this.lblTitulo.Location = new System.Drawing.Point(101, 38);
+            this.lblTitulo.Location = new System.Drawing.Point(245, 87);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(743, 83);
+            this.lblTitulo.Size = new System.Drawing.Size(556, 63);
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "SystemTP Enterprise2k23";
             this.lblTitulo.Click += new System.EventHandler(this.lblTitulo_Click);
@@ -147,86 +146,68 @@ namespace TP_WinFormV01
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(645, 183);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 21);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Agregar Articulo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(645, 297);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 21);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Listar Articulos";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TP_WinFormV01.Properties.Resources.admin_console_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(180, 157);
+            this.pictureBox1.Location = new System.Drawing.Point(140, 153);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 194);
+            this.pictureBox1.Size = new System.Drawing.Size(357, 332);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // btnAgregar
+            // button1
             // 
-            this.btnAgregar.BackgroundImage = global::TP_WinFormV01.Properties.Resources.agregar;
-            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(526, 157);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(92, 74);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
+            this.button1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(628, 234);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 60);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Ingresar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnArticulos
+            // button2
             // 
-            this.btnArticulos.BackgroundImage = global::TP_WinFormV01.Properties.Resources.evaluacion;
-            this.btnArticulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnArticulos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnArticulos.FlatAppearance.BorderSize = 0;
-            this.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArticulos.Location = new System.Drawing.Point(526, 259);
-            this.btnArticulos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnArticulos.Name = "btnArticulos";
-            this.btnArticulos.Size = new System.Drawing.Size(92, 71);
-            this.btnArticulos.TabIndex = 0;
-            this.btnArticulos.UseVisualStyleBackColor = true;
-            this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
+            this.button2.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(628, 362);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(134, 60);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Salir";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button1_Click);
             // 
-            // frmMenuPrincipal
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft New Tai Lue", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(370, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(282, 63);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Bienvenidos";
+            this.label1.Click += new System.EventHandler(this.lblTitulo_Click);
+            // 
+            // frmBienvenida
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(933, 519);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.btnArticulos);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "frmMenuPrincipal";
+            this.Name = "frmBienvenida";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load_1);
@@ -239,8 +220,6 @@ namespace TP_WinFormV01
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnArticulos;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
@@ -250,12 +229,12 @@ namespace TP_WinFormV01
         private System.Windows.Forms.ToolStripMenuItem optionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devToolStripMenuItem;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
     }
 }
 

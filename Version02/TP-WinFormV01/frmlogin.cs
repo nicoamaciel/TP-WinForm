@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP_WinFormV01
 {
-    public partial class frmMenuPrincipal : Form
+    public partial class frmlogin : Form
     {
-        public frmMenuPrincipal()
+        public frmlogin()
         {
             InitializeComponent();
         }
@@ -50,6 +50,59 @@ namespace TP_WinFormV01
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUser_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Enter_Click(object sender, EventArgs e)
+        {
+
+
+            if (txtUser.Text== "admin" && txtPassword.Text == "admin")
+            {
+
+                MessageBox.Show("acceso Permitido");
+
+                this.Close();
+
+
+                // Abrir el FormMenu
+                frmMenuPrincipal menuPrincipal = new frmMenuPrincipal();
+                menuPrincipal.Show();
+
+
+            }
+            else
+            {
+
+
+                MessageBox.Show("Credenciales Incorrectas reintente");
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUser_TextChanged(object sender, EventArgs e)
         {
 
         }

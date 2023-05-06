@@ -111,5 +111,10 @@ namespace TP_WinFormV01
             }
 
 }
+
+        private void CbMarca_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

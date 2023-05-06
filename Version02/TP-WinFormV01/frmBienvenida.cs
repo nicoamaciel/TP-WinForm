@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TP_WinFormV01
 {
-    public partial class frmMenuPrincipal : Form
+    public partial class frmBienvenida : Form
     {
-        public frmMenuPrincipal()
+        public frmBienvenida()
         {
             InitializeComponent();
         }
@@ -51,6 +51,21 @@ namespace TP_WinFormV01
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            frmlogin login= new frmlogin();
+            login.Show();
+
+
 
         }
     }

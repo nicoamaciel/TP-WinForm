@@ -172,6 +172,7 @@
             this.CbMarca.Name = "CbMarca";
             this.CbMarca.Size = new System.Drawing.Size(121, 21);
             this.CbMarca.TabIndex = 18;
+            this.CbMarca.SelectedIndexChanged += new System.EventHandler(this.CbMarca_SelectedIndexChanged);
             // 
             // frmCargarArt
             // 

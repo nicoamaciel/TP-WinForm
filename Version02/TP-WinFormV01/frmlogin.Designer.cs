@@ -1,16 +1,8 @@
 ﻿
-using System.Windows.Forms.VisualStyles;
-
 namespace TP_WinFormV01
 {
-    partial class frmMenuPrincipal
+    partial class frmlogin
     {
-
-   
-
-
-
-
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -50,10 +42,14 @@ namespace TP_WinFormV01
             this.lblTitulo = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.Enter = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnArticulos = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -150,83 +146,121 @@ namespace TP_WinFormV01
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(645, 183);
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(536, 196);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 21);
+            this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Agregar Articulo";
+            this.label1.Text = "Login";
             // 
-            // label2
+            // lblUser
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(645, 297);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 21);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Listar Articulos";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblUser.Location = new System.Drawing.Point(380, 255);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(71, 20);
+            this.lblUser.TabIndex = 5;
+            this.lblUser.Text = "Usuario:";
+            this.lblUser.Click += new System.EventHandler(this.lblUser_Click);
+            // 
+            // lblContraseña
+            // 
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblContraseña.Location = new System.Drawing.Point(380, 308);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(100, 20);
+            this.lblContraseña.TabIndex = 5;
+            this.lblContraseña.Text = "Contraseña:";
+            // 
+            // txtUser
+            // 
+            this.txtUser.Location = new System.Drawing.Point(485, 257);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(177, 22);
+            this.txtUser.TabIndex = 6;
+            this.txtUser.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(485, 306);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(177, 22);
+            this.txtPassword.TabIndex = 6;
+            // 
+            // Enter
+            // 
+            this.Enter.Location = new System.Drawing.Point(678, 357);
+            this.Enter.Name = "Enter";
+            this.Enter.Size = new System.Drawing.Size(75, 23);
+            this.Enter.TabIndex = 7;
+            this.Enter.Text = "Acceder";
+            this.Enter.UseVisualStyleBackColor = true;
+            this.Enter.Click += new System.EventHandler(this.Enter_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::TP_WinFormV01.Properties.Resources.admin_console_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(180, 157);
+            this.pictureBox1.Location = new System.Drawing.Point(131, 168);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(186, 194);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // btnAgregar
+            // label2
             // 
-            this.btnAgregar.BackgroundImage = global::TP_WinFormV01.Properties.Resources.agregar;
-            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(526, 157);
-            this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(92, 74);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(12, 467);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(658, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "IMPORTANTE: Este es una version Trial del sistema, no tiene la opcion de gestiona" +
+    "r registros de usuarios para";
             // 
-            // btnArticulos
+            // label3
             // 
-            this.btnArticulos.BackgroundImage = global::TP_WinFormV01.Properties.Resources.evaluacion;
-            this.btnArticulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnArticulos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnArticulos.FlatAppearance.BorderSize = 0;
-            this.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArticulos.Location = new System.Drawing.Point(526, 259);
-            this.btnArticulos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnArticulos.Name = "btnArticulos";
-            this.btnArticulos.Size = new System.Drawing.Size(92, 71);
-            this.btnArticulos.TabIndex = 0;
-            this.btnArticulos.UseVisualStyleBackColor = true;
-            this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(96, 484);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(571, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "seguir probando las funcionalidades del programa ingrese \"admin\" como usuario y c" +
+    "ontraseña";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // frmMenuPrincipal
+            // frmlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSlateGray;
             this.ClientSize = new System.Drawing.Size(933, 519);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.Enter);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.lblContraseña);
+            this.Controls.Add(this.lblUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.btnArticulos);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "frmMenuPrincipal";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmlogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
             this.Load += new System.EventHandler(this.frmMenuPrincipal_Load_1);
@@ -239,8 +273,6 @@ namespace TP_WinFormV01
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnArticulos;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
@@ -250,12 +282,17 @@ namespace TP_WinFormV01
         private System.Windows.Forms.ToolStripMenuItem optionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devToolStripMenuItem;
-        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button Enter;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
 

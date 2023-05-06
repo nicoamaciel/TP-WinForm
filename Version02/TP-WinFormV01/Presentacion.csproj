@@ -64,6 +64,18 @@
     <Compile Include="frmCargarArt.Designer.cs">
       <DependentUpon>frmCargarArt.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBienvenida.Designer.cs">
+      <DependentUpon>frmBienvenida.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +89,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCargarArt.resx">
       <DependentUpon>frmCargarArt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBienvenida.resx">
+      <DependentUpon>frmBienvenida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
@@ -131,6 +149,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CarpetaEliminada1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_console_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
