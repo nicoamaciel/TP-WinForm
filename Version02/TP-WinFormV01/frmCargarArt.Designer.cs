@@ -43,6 +43,7 @@
             this.Precio = new System.Windows.Forms.TextBox();
             this.CbCategoria = new System.Windows.Forms.ComboBox();
             this.CbMarca = new System.Windows.Forms.ComboBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCod
@@ -141,13 +142,13 @@
             this.btnCargarArt.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnCargarArt.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargarArt.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCargarArt.Location = new System.Drawing.Point(494, 347);
+            this.btnCargarArt.Location = new System.Drawing.Point(173, 343);
             this.btnCargarArt.Name = "btnCargarArt";
             this.btnCargarArt.Size = new System.Drawing.Size(157, 40);
             this.btnCargarArt.TabIndex = 13;
-            this.btnCargarArt.Text = "Cargar Articulo";
+            this.btnCargarArt.Text = "Aceptar";
             this.btnCargarArt.UseVisualStyleBackColor = false;
-            this.btnCargarArt.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnCargarArt.Click += new System.EventHandler(this.btnCargar_Click_1);
             // 
             // Precio
             // 
@@ -173,12 +174,26 @@
             this.CbMarca.Size = new System.Drawing.Size(121, 21);
             this.CbMarca.TabIndex = 18;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancelar.Location = new System.Drawing.Point(417, 343);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(157, 40);
+            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // frmCargarArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(741, 465);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.CbMarca);
             this.Controls.Add(this.CbCategoria);
             this.Controls.Add(this.Precio);
@@ -219,5 +234,6 @@
         private System.Windows.Forms.TextBox Precio;
         private System.Windows.Forms.ComboBox CbCategoria;
         private System.Windows.Forms.ComboBox CbMarca;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

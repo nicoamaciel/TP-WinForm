@@ -29,7 +29,7 @@ namespace TP_WinFormV01
         }
 
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void btnCargar_Click_1(object sender, EventArgs e)
         {
            ElementosCatalogo Art = new ElementosCatalogo();
             try
@@ -42,8 +42,18 @@ namespace TP_WinFormV01
                 articulo.Precio = decimal.Parse(Precio.Text);
                 articulo.Marca = (Marca)CbMarca.SelectedItem;
                 articulo.Categoria = (Categorias)CbCategoria.SelectedItem;
-                Art.cargarArticulo(articulo);
-                MessageBox.Show("Carga Exitosa");
+                if (articulo.ID != 0)
+                {
+                    Art.modificarArticulo(articulo);
+                    MessageBox.Show("Modificado exitosamente");
+                }
+                else
+                {
+                    Art.cargarArticulo(articulo);
+                    MessageBox.Show("Agregado exitosamente");
+                }
+                Close();
+
             }
             catch(Exception ex) 
             {
@@ -51,28 +61,6 @@ namespace TP_WinFormV01
             }
             
         }
-
-
-        private void IDMarca_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if((e.KeyChar >= 32 &&  e.KeyChar <=47) || (e.KeyChar >=58 &&  e.KeyChar <= 255))
-            {
-                MessageBox.Show("Valor Debe ser Numerico","Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-        }
-
-        private void IDCategoria_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
-            {
-                MessageBox.Show("Valor Debe ser Numerico", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-        }
-
         private void Precio_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 47) || (e.KeyChar >= 58 && e.KeyChar <= 255))
@@ -111,5 +99,10 @@ namespace TP_WinFormV01
             }
 
 }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

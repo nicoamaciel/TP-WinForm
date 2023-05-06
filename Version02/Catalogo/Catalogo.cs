@@ -36,11 +36,7 @@ namespace Catalogo
                     // Cerrar conexión
                     datos.cerrarConexion();
                 }
-            
-
         }
-
-
 
         public List<Articulos> listar()
         {
@@ -97,5 +93,132 @@ namespace Catalogo
                 throw ex;
             }
         }
+
+        public void modificarArticulo(Articulos modificar)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("update ARTICULOS set Codigo = @Codigo, Nombre = @nombre, Descripcion = @desc, Precio = @Precio, IdMarca = @idmarca, IdCategoria = @idcategoria Where Id = @id");
+                datos.setearParametro("@Codigo", modificar.Codigo);
+                datos.setearParametro("@nombre", modificar.Nombre);
+                datos.setearParametro("@desc", modificar.Descripcion);
+                datos.setearParametro("@Precio", modificar.Precio);
+                datos.setearParametro("@idmarca", modificar.Marca.ID);
+                datos.setearParametro("@idcategoria", modificar.Categoria.ID);
+                datos.setearParametro("@id", modificar.ID);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public List<Articulos> filtrar(string campo, string criterio, string filtro)
+        {
+            List<Articulos> lista = new List<Articulos>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = "select A.Id, Codigo, Nombre, A.Descripcion, M.Descripcion 'Marca' ,C.Descripcion 'Categoria', A.Precio " +
+                    "from ARTICULOS A,MARCAS M, CATEGORIAS C " +
+                    "WHERE M.Id=IdMarca and C.Id=IdCategoria AND ";
+                if (campo == "Precio")
+                {
+                    switch (criterio)
+                    {
+                        case "Mayor a":
+                            consulta += "Precio > " + filtro;
+                            break;
+                        case "Menor a":
+                            consulta += "Precio < " + filtro;
+                            break;
+                        default:
+                            consulta += "Precio = " + filtro;
+                            break;
+                    }
+                }
+                else if (campo == "Nombre")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "Nombre like '" + filtro + "%' ";
+                            break;
+                        case "Termina con":
+                            consulta += "Nombre like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "Nombre like '%" + filtro + "%'";
+                            break;
+                    }
+                }
+                else if (campo == "Marca")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "M.Descripcion like '" + filtro + "%' ";
+                            break;
+                        case "Termina con":
+                            consulta += "M.Descripcion like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "M.Descripcion like '%" + filtro + "%'";
+                            break;
+                    }
+                }
+                else if (campo == "Categoria")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "C.Descripcion like '" + filtro + "%' ";
+                            break;
+                        case "Termina con":
+                            consulta += "C.Descripcion like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "C.Descripcion like '%" + filtro + "%'";
+                            break;
+                    }
+                }
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())
+                {
+                    Articulos aux = new Articulos();
+                    aux.ID = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    aux.Marca = new Marca();
+                    aux.Marca.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    aux.Categoria = new Categorias();
+                    aux.Categoria.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+
+                    lista.Add(aux);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
     }
+
 }

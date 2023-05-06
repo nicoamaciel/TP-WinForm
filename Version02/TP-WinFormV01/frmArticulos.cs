@@ -22,26 +22,37 @@ namespace TP_WinFormV01
 
         private void frmArticulos_Load(object sender, EventArgs e)
         {
-            ElementosCatalogo art = new ElementosCatalogo();
-            listaArticulos = art.listar();
-            
-        }
+            cargar();
+            cbCampo.Items.Add("Nombre");
+            cbCampo.Items.Add("Categoria");
+            cbCampo.Items.Add("Marca");
+            cbCampo.Items.Add("Precio");
 
-        private void button1_Click(object sender, EventArgs e)
+        }
+        private void btnFiltro_Click(object sender, EventArgs e)
         {
-            List<Articulos> filtroArt;
+            ElementosCatalogo articulo = new ElementosCatalogo();
+            try
+            {
+                if (validarFiltro())
+                    return;
 
-            filtroArt = listaArticulos.FindAll(x => x.Codigo == txtArticulos.Text);
-            dgvBuscarArt.DataSource = null;
-            dgvBuscarArt.DataSource = filtroArt;
+                string campo = cbCampo.SelectedItem.ToString();
+                string criterio = CbCriterio.SelectedItem.ToString();
+                string filtro = txtArticulos.Text;
+                dgvBuscarArt.DataSource = articulo.filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
-
         private void btnListaTdo_Click(object sender, EventArgs e)
         {
             dgvBuscarArt.DataSource = null;
             dgvBuscarArt.DataSource = listaArticulos;
         }
-
         private void btnFisico_Click(object sender, EventArgs e)
         {
             eliminar();
@@ -80,5 +91,71 @@ namespace TP_WinFormV01
                 MessageBox.Show(ex.ToString());
             }
         }
+        private bool validarFiltro()
+        {
+            if (cbCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el campo para filtrar.");
+                return true;
+            }
+            if (CbCriterio.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor, seleccione el criterio para filtrar.");
+                return true;
+            }
+            if (cbCampo.SelectedItem.ToString() == "Número")
+            {
+                if (string.IsNullOrEmpty(txtArticulos.Text))
+                {
+                    MessageBox.Show("Debes cargar el filtro para numéricos...");
+                    return true;
+                }
+                if (!(soloNumeros(txtArticulos.Text)))
+                {
+                    MessageBox.Show("Solo nros para filtrar por un campo numérico...");
+                    return true;
+                }
+
+            }
+
+            return false;
+        }
+        private bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+            return true;
+        }
+        private void cbCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cbCampo.SelectedItem.ToString();
+            if (opcion == "Precio")
+            {
+                CbCriterio.Items.Clear();
+                CbCriterio.Items.Add("Mayor a");
+                CbCriterio.Items.Add("Menor a");
+                CbCriterio.Items.Add("Igual a");
+            }
+            else
+            {
+                CbCriterio.Items.Clear();
+                CbCriterio.Items.Add("Comienza con");
+                CbCriterio.Items.Add("Termina con");
+                CbCriterio.Items.Add("Contiene");
+            }
+        }
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulos seleccionado;
+            seleccionado = (Articulos)dgvBuscarArt.CurrentRow.DataBoundItem;
+
+            frmCargarArt modificar = new frmCargarArt(seleccionado);
+            modificar.ShowDialog();
+            cargar();
+        }
+
     }
 }
