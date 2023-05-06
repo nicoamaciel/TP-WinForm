@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Catalogo;
 using Dominio;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace TP_WinFormV01
 {
     public partial class frmArticulos : Form
     {
         private List<Articulos> listaArticulos;
+        private List<Imagenes> listarImagenes;
         public frmArticulos()
         {
             InitializeComponent();
@@ -80,17 +82,45 @@ namespace TP_WinFormV01
         private void cargar()
         {
             ElementosCatalogo negocio = new ElementosCatalogo();
+            CatalogoImagenes imagen = new CatalogoImagenes();
             try
             {
                 listaArticulos = negocio.listar();
                 dgvBuscarArt.DataSource = listaArticulos;
-                //cargarImagen(listaArticulos[0].UrlImagen);
+                listarImagenes = imagen.listar(listaArticulos[0]);
+                cargarImagen(listarImagenes[0].ImagenURL);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
         }
+        private void cargarImagen(string Url)
+        {
+
+            try
+            {
+                PbxImagen.Load(Url);
+            }
+            catch (Exception ex)
+            {
+                PbxImagen.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
+
+
+        }
+        private void dgvBuscarArt_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvBuscarArt.CurrentRow != null)
+            {
+                CatalogoImagenes imagen = new CatalogoImagenes();
+                Articulos seleccionado = (Articulos)dgvBuscarArt.CurrentRow.DataBoundItem;
+
+                listarImagenes = imagen.listar(seleccionado);
+                cargarImagen(listarImagenes[0].ImagenURL);
+            }
+        }
+
         private bool validarFiltro()
         {
             if (cbCampo.SelectedIndex < 0)

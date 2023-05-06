@@ -49,17 +49,20 @@ namespace TP_WinFormV01
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.PbxImagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarArt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvBuscarArt
             // 
             this.dgvBuscarArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscarArt.Location = new System.Drawing.Point(12, 123);
+            this.dgvBuscarArt.Location = new System.Drawing.Point(-10, 123);
             this.dgvBuscarArt.Name = "dgvBuscarArt";
-            this.dgvBuscarArt.Size = new System.Drawing.Size(740, 416);
+            this.dgvBuscarArt.Size = new System.Drawing.Size(762, 407);
             this.dgvBuscarArt.TabIndex = 0;
+            this.dgvBuscarArt.SelectionChanged += new System.EventHandler(this.dgvBuscarArt_SelectionChanged);
             // 
             // label2
             // 
@@ -260,12 +263,21 @@ namespace TP_WinFormV01
             this.label6.TabIndex = 23;
             this.label6.Text = "Modificar";
             // 
+            // PbxImagen
+            // 
+            this.PbxImagen.Location = new System.Drawing.Point(753, 123);
+            this.PbxImagen.Name = "PbxImagen";
+            this.PbxImagen.Size = new System.Drawing.Size(444, 407);
+            this.PbxImagen.TabIndex = 24;
+            this.PbxImagen.TabStop = false;
+            // 
             // frmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.ClientSize = new System.Drawing.Size(1025, 542);
+            this.ClientSize = new System.Drawing.Size(1209, 545);
+            this.Controls.Add(this.PbxImagen);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel3);
@@ -293,6 +305,7 @@ namespace TP_WinFormV01
             this.Load += new System.EventHandler(this.frmArticulos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarArt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,5 +333,6 @@ namespace TP_WinFormV01
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox PbxImagen;
     }
 }

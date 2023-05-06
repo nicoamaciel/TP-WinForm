@@ -44,6 +44,7 @@
     <Compile Include="AccesoDatos.cs" />
     <Compile Include="Catalogo.cs" />
     <Compile Include="CatalogoCategoria.cs" />
+    <Compile Include="CatalogoImagenes.cs" />
     <Compile Include="CatalogoMarcas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

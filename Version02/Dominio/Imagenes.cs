@@ -9,8 +9,11 @@ namespace Dominio
     public class Imagenes
     {
         public int ID { get; set; }
-        public Articulos articulo { get; set; }
+        public int  IDArticulo { get; set; }
         public string ImagenURL { get; set; }
-
+        public override string ToString()
+        {
+            return ImagenURL;
+        }
     }
 }

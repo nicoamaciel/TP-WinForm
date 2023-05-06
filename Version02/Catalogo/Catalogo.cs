@@ -45,7 +45,7 @@ namespace Catalogo
 
             try
             {
-                datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, A.IdCategoria, A.Precio from ARTICULOS as A");
+                datos.setearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion 'Marca', C.Descripcion 'Categoria' , A.Precio from ARTICULOS as A,MARCAS M,CATEGORIAS C WHERE M.Id=IdMarca and C.Id=IdCategoria");
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
@@ -56,9 +56,9 @@ namespace Catalogo
                     aux.Nombre = (string)datos.Lector["Nombre"];
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
                     aux.Marca = new Marca();
-                    aux.Marca.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
                     aux.Categoria = new Categorias();
-                    aux.Categoria.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
                     aux.Precio = (decimal)datos.Lector["Precio"];
 
                     lista.Add(aux);
@@ -200,10 +200,10 @@ namespace Catalogo
                     aux.Descripcion = (string)datos.Lector["Descripcion"];
 
                     aux.Marca = new Marca();
-                    aux.Marca.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Marca.Descripcion = (string)datos.Lector["Marca"];
 
                     aux.Categoria = new Categorias();
-                    aux.Categoria.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Categoria.Descripcion = (string)datos.Lector["Categoria"];
 
                     aux.Precio = (decimal)datos.Lector["Precio"];
 
