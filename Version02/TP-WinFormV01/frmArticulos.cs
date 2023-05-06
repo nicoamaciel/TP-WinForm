@@ -17,6 +17,7 @@ namespace TP_WinFormV01
     {
         private List<Articulos> listaArticulos;
         private List<Imagenes> listarImagenes;
+
         public frmArticulos()
         {
             InitializeComponent();
@@ -55,30 +56,6 @@ namespace TP_WinFormV01
             dgvBuscarArt.DataSource = null;
             dgvBuscarArt.DataSource = listaArticulos;
         }
-        private void btnFisico_Click(object sender, EventArgs e)
-        {
-            eliminar();
-        }
-        private void eliminar(bool logico = false)
-        {
-            ElementosCatalogo negocio = new ElementosCatalogo();
-            Articulos seleccionado;
-            try
-            {
-                DialogResult respuesta = MessageBox.Show("¿De verdad querés eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (respuesta == DialogResult.Yes)
-                {
-                    seleccionado = (Articulos)dgvBuscarArt.CurrentRow.DataBoundItem;
-                        negocio.eliminar(seleccionado.ID);
-
-                    cargar();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
         private void cargar()
         {
             ElementosCatalogo negocio = new ElementosCatalogo();
@@ -87,12 +64,20 @@ namespace TP_WinFormV01
             {
                 listaArticulos = negocio.listar();
                 dgvBuscarArt.DataSource = listaArticulos;
-                listarImagenes = imagen.listar(listaArticulos[0]);
-                cargarImagen(listarImagenes[0].ImagenURL);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+        }
+        private void dgvBuscarArt_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvBuscarArt.CurrentRow != null)
+            {
+                CatalogoImagenes imagenes=new CatalogoImagenes();
+                Articulos seleccionado = (Articulos)dgvBuscarArt.CurrentRow.DataBoundItem;
+                listarImagenes = imagenes.listar(seleccionado);
+                cargarImagen(listarImagenes[0].ImagenURL);
             }
         }
         private void cargarImagen(string Url)
@@ -106,21 +91,7 @@ namespace TP_WinFormV01
             {
                 PbxImagen.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
             }
-
-
         }
-        private void dgvBuscarArt_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvBuscarArt.CurrentRow != null)
-            {
-                CatalogoImagenes imagen = new CatalogoImagenes();
-                Articulos seleccionado = (Articulos)dgvBuscarArt.CurrentRow.DataBoundItem;
-
-                listarImagenes = imagen.listar(seleccionado);
-                cargarImagen(listarImagenes[0].ImagenURL);
-            }
-        }
-
         private bool validarFiltro()
         {
             if (cbCampo.SelectedIndex < 0)
@@ -177,15 +148,10 @@ namespace TP_WinFormV01
                 CbCriterio.Items.Add("Contiene");
             }
         }
-        private void btnModificar_Click(object sender, EventArgs e)
+
+        private void BtnSalir_Click(object sender, EventArgs e)
         {
-            Articulos seleccionado;
-            seleccionado = (Articulos)dgvBuscarArt.CurrentRow.DataBoundItem;
-
-            frmCargarArt modificar = new frmCargarArt(seleccionado);
-            modificar.ShowDialog();
-            cargar();
+            Close();
         }
-
     }
 }

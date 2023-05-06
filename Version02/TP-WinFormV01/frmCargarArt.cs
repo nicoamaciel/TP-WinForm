@@ -9,22 +9,27 @@ using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
+using System.Configuration;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TP_WinFormV01
 {
     public partial class frmCargarArt : Form
     {
+        private OpenFileDialog archivo = null;
         private Articulos articulo = null;
+        private Imagenes imagenes = null;
         public frmCargarArt()
         {
             InitializeComponent();
         }
-        public frmCargarArt(Articulos articulo)
+        public frmCargarArt(Articulos articulo,Imagenes imagen)
         {
             InitializeComponent();
             this.articulo = articulo;
+            this.imagenes = imagen;
             Text = "Modificar Articulo";
         }
 
@@ -32,10 +37,12 @@ namespace TP_WinFormV01
         private void btnCargar_Click_1(object sender, EventArgs e)
         {
            ElementosCatalogo Art = new ElementosCatalogo();
+            CatalogoImagenes img = new CatalogoImagenes();
             try
             {
                 if (articulo == null)
-                    articulo = new Articulos();
+                articulo = new Articulos();
+                imagenes = new Imagenes();
                 articulo.Nombre = Nombre.Text;
                 articulo.Codigo = Codigo.Text;
                 articulo.Descripcion=Descripcion.Text;
@@ -45,13 +52,19 @@ namespace TP_WinFormV01
                 if (articulo.ID != 0)
                 {
                     Art.modificarArticulo(articulo);
+                    imagenes.ImagenURL = txtImagen.Text;
+                    img.modificarImagen(imagenes);
                     MessageBox.Show("Modificado exitosamente");
                 }
                 else
                 {
                     Art.cargarArticulo(articulo);
+                    imagenes.IDArticulo = articulo.ID;
+                    imagenes.ImagenURL = txtImagen.Text;
+                    img.cargarImagenes(imagenes);
                     MessageBox.Show("Agregado exitosamente");
                 }
+                
                 Close();
 
             }
@@ -85,6 +98,9 @@ namespace TP_WinFormV01
             CbMarca.DisplayMember = "Descripcion";
             if (articulo != null)
             {
+                txtImagen.Text = imagenes.ToString();
+                    imagenes.ID = articulo.ID;
+                    imagenes.IDArticulo = articulo.ID;
                 Codigo.Text = articulo.Codigo;
                 Nombre.Text = articulo.Nombre;
                 Descripcion.Text = articulo.Descripcion;
@@ -103,6 +119,33 @@ namespace TP_WinFormV01
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnImagen_Click(object sender, EventArgs e)
+        {
+            archivo = new OpenFileDialog();
+            archivo.Filter = "jpg|*.jpg;|png|*.png";
+            if (archivo.ShowDialog() == DialogResult.OK)
+            {
+                txtImagen.Text = archivo.FileName;
+                cargarImagen(archivo.FileName);
+
+                //guardo la imagen
+                //File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
+            }
+
+        }
+
+        private void cargarImagen(string imagen)
+        {
+            try
+            {
+                PbxImagen.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+                PbxImagen.Load("https://efectocolibri.com/wp-content/uploads/2021/01/placeholder.png");
+            }
         }
     }
 }

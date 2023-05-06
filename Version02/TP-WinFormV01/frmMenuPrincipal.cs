@@ -43,5 +43,11 @@ namespace TP_WinFormV01
         {
 
         }
+
+        private void BtnModEli_Click(object sender, EventArgs e)
+        {
+            frmModificador ventana = new frmModificador();
+            ventana.ShowDialog();
+        }
     }
 }

@@ -44,6 +44,11 @@
             this.CbCategoria = new System.Windows.Forms.ComboBox();
             this.CbMarca = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnImagen = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtImagen = new System.Windows.Forms.TextBox();
+            this.PbxImagen = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCod
@@ -187,12 +192,53 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnImagen
+            // 
+            this.btnImagen.Location = new System.Drawing.Point(462, 305);
+            this.btnImagen.Name = "btnImagen";
+            this.btnImagen.Size = new System.Drawing.Size(26, 24);
+            this.btnImagen.TabIndex = 20;
+            this.btnImagen.Text = "+";
+            this.btnImagen.UseVisualStyleBackColor = true;
+            this.btnImagen.Click += new System.EventHandler(this.btnImagen_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(239, 303);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(69, 20);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Imagen";
+            // 
+            // txtImagen
+            // 
+            this.txtImagen.Location = new System.Drawing.Point(314, 305);
+            this.txtImagen.Name = "txtImagen";
+            this.txtImagen.Size = new System.Drawing.Size(142, 20);
+            this.txtImagen.TabIndex = 22;
+            // 
+            // PbxImagen
+            // 
+            this.PbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbxImagen.Location = new System.Drawing.Point(688, 102);
+            this.PbxImagen.Name = "PbxImagen";
+            this.PbxImagen.Size = new System.Drawing.Size(290, 294);
+            this.PbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbxImagen.TabIndex = 23;
+            this.PbxImagen.TabStop = false;
+            // 
             // frmCargarArt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(741, 465);
+            this.ClientSize = new System.Drawing.Size(990, 465);
+            this.Controls.Add(this.PbxImagen);
+            this.Controls.Add(this.txtImagen);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnImagen);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.CbMarca);
             this.Controls.Add(this.CbCategoria);
@@ -213,6 +259,7 @@
             this.Tag = "";
             this.Text = "frmCargarArt";
             this.Load += new System.EventHandler(this.frmCargarArt_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +282,9 @@
         private System.Windows.Forms.ComboBox CbCategoria;
         private System.Windows.Forms.ComboBox CbMarca;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnImagen;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtImagen;
+        private System.Windows.Forms.PictureBox PbxImagen;
     }
 }

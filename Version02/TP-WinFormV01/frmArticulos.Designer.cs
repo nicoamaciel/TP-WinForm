@@ -35,21 +35,17 @@ namespace TP_WinFormV01
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnFisico = new System.Windows.Forms.Button();
             this.btnListaTdo = new System.Windows.Forms.Button();
             this.btnFiltro = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbCampo = new System.Windows.Forms.ComboBox();
             this.CbCriterio = new System.Windows.Forms.ComboBox();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.PbxImagen = new System.Windows.Forms.PictureBox();
+            this.BtnSalir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarArt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).BeginInit();
@@ -109,31 +105,6 @@ namespace TP_WinFormV01
             this.panel2.Size = new System.Drawing.Size(110, 1);
             this.panel2.TabIndex = 6;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(704, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(305, 25);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Eliminar Articulo Seleccionado";
-            // 
-            // btnFisico
-            // 
-            this.btnFisico.BackgroundImage = global::TP_WinFormV01.Properties.Resources.CarpetaEliminada;
-            this.btnFisico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFisico.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFisico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFisico.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnFisico.Location = new System.Drawing.Point(833, 43);
-            this.btnFisico.Name = "btnFisico";
-            this.btnFisico.Size = new System.Drawing.Size(42, 38);
-            this.btnFisico.TabIndex = 12;
-            this.btnFisico.UseVisualStyleBackColor = true;
-            this.btnFisico.Click += new System.EventHandler(this.btnFisico_Click);
-            // 
             // btnListaTdo
             // 
             this.btnListaTdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
@@ -191,21 +162,6 @@ namespace TP_WinFormV01
             this.CbCriterio.Size = new System.Drawing.Size(121, 21);
             this.CbCriterio.TabIndex = 15;
             // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.btnModificar.BackgroundImage = global::TP_WinFormV01.Properties.Resources.evaluacion;
-            this.btnModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Location = new System.Drawing.Point(652, 78);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(46, 39);
-            this.btnModificar.TabIndex = 16;
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -244,51 +200,46 @@ namespace TP_WinFormV01
             this.panel3.Size = new System.Drawing.Size(110, 1);
             this.panel3.TabIndex = 21;
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(517, 106);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(110, 1);
-            this.panel5.TabIndex = 22;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(516, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 25);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Modificar";
-            // 
             // PbxImagen
             // 
-            this.PbxImagen.Location = new System.Drawing.Point(753, 123);
+            this.PbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PbxImagen.Location = new System.Drawing.Point(758, 123);
             this.PbxImagen.Name = "PbxImagen";
-            this.PbxImagen.Size = new System.Drawing.Size(444, 407);
-            this.PbxImagen.TabIndex = 24;
+            this.PbxImagen.Size = new System.Drawing.Size(395, 407);
+            this.PbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbxImagen.TabIndex = 22;
             this.PbxImagen.TabStop = false;
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.BackgroundImage = global::TP_WinFormV01.Properties.Resources.verde;
+            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnSalir.FlatAppearance.BorderSize = 0;
+            this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.Location = new System.Drawing.Point(521, 69);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(119, 49);
+            this.BtnSalir.TabIndex = 23;
+            this.BtnSalir.Text = "Salir";
+            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
             // frmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
-            this.ClientSize = new System.Drawing.Size(1209, 545);
+            this.ClientSize = new System.Drawing.Size(1165, 545);
+            this.Controls.Add(this.BtnSalir);
             this.Controls.Add(this.PbxImagen);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.CbCriterio);
             this.Controls.Add(this.cbCampo);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnFisico);
             this.Controls.Add(this.btnListaTdo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
@@ -298,7 +249,7 @@ namespace TP_WinFormV01
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvBuscarArt);
-            this.MinimumSize = new System.Drawing.Size(1041, 581);
+            this.MinimumSize = new System.Drawing.Size(774, 584);
             this.Name = "frmArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulos";
@@ -322,17 +273,13 @@ namespace TP_WinFormV01
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnListaTdo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnFisico;
         private System.Windows.Forms.ComboBox cbCampo;
         private System.Windows.Forms.ComboBox CbCriterio;
-        private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox PbxImagen;
+        private System.Windows.Forms.Button BtnSalir;
     }
 }

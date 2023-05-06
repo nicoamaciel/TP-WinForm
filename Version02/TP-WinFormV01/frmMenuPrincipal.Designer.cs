@@ -40,6 +40,7 @@ namespace TP_WinFormV01
             this.devToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnArticulos = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.BtnModEli = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,12 +145,29 @@ namespace TP_WinFormV01
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
             // 
+            // BtnModEli
+            // 
+            this.BtnModEli.BackgroundImage = global::TP_WinFormV01.Properties.Resources.verde;
+            this.BtnModEli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnModEli.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnModEli.FlatAppearance.BorderSize = 0;
+            this.BtnModEli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnModEli.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModEli.Location = new System.Drawing.Point(12, 210);
+            this.BtnModEli.Name = "BtnModEli";
+            this.BtnModEli.Size = new System.Drawing.Size(119, 49);
+            this.BtnModEli.TabIndex = 3;
+            this.BtnModEli.Text = "Modificar/Eliminar";
+            this.BtnModEli.UseVisualStyleBackColor = true;
+            this.BtnModEli.Click += new System.EventHandler(this.BtnModEli_Click);
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnModEli);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnArticulos);
             this.Controls.Add(this.menuStrip1);
@@ -178,6 +196,7 @@ namespace TP_WinFormV01
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem devToolStripMenuItem;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button BtnModEli;
     }
 }
 
