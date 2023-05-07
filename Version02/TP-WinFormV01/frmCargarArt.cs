@@ -19,6 +19,7 @@ namespace TP_WinFormV01
     public partial class frmCargarArt : Form
     {
         private OpenFileDialog archivo = null;
+        private List<Articulos> listaArticulos;
         private Articulos articulo = null;
         private Imagenes imagenes = null;
         public frmCargarArt()
@@ -59,7 +60,8 @@ namespace TP_WinFormV01
                 else
                 {
                     Art.cargarArticulo(articulo);
-                    imagenes.IDArticulo = articulo.ID;
+                    listaArticulos = Art.filtrar(Nombre.Text);
+                    imagenes.IDArticulo = listaArticulos[0].ID;
                     imagenes.ImagenURL = txtImagen.Text;
                     img.cargarImagenes(imagenes);
                     MessageBox.Show("Agregado exitosamente");
@@ -129,9 +131,6 @@ namespace TP_WinFormV01
             {
                 txtImagen.Text = archivo.FileName;
                 cargarImagen(archivo.FileName);
-
-                //guardo la imagen
-                //File.Copy(archivo.FileName, ConfigurationManager.AppSettings["images-folder"] + archivo.SafeFileName);
             }
 
         }

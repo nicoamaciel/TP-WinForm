@@ -45,7 +45,7 @@ namespace Catalogo
             try
             {
                 AccesoDatos datos = new AccesoDatos();
-                datos.setearConsulta("delete from ARTICULOS where IdArticulo = @id");
+                datos.setearConsulta("delete from IMAGENES where IdArticulo = @id");
                 datos.setearParametro("@id", id);
                 datos.ejecutarAccion();
             }

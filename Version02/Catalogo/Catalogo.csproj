@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccesoDatos.cs" />
-    <Compile Include="Catalogo.cs" />
+    <Compile Include="CatalogoArticulo.cs" />
     <Compile Include="CatalogoCategoria.cs" />
     <Compile Include="CatalogoImagenes.cs" />
     <Compile Include="CatalogoMarcas.cs" />

@@ -69,9 +69,11 @@ namespace TP_WinFormV01
         private void btnArticulos_Click(object sender, EventArgs e)
         {
             ElementosCatalogo articulo = new ElementosCatalogo();
+
             try
             {
                 string campo = CbxArticulos.SelectedItem.ToString();
+                CbxArticulos.Text = null;
                 DgvArticulo.DataSource = articulo.filtrar(campo);
             }
             catch (Exception ex)
@@ -85,7 +87,6 @@ namespace TP_WinFormV01
             CatalogoImagenes imagen = new CatalogoImagenes();
             Articulos seleccionado;
             seleccionado = (Articulos)DgvArticulo.CurrentRow.DataBoundItem;
-            Imagenes ImgSeleccionada;
             listarImagenes = imagen.listar(seleccionado);
 
             frmCargarArt modificar = new frmCargarArt(seleccionado, listarImagenes[0]);
@@ -106,27 +107,26 @@ namespace TP_WinFormV01
                     ArtSeleccionado = (Articulos)DgvArticulo.CurrentRow.DataBoundItem;
                     imagen.eliminar(ArtSeleccionado.ID);
                     negocio.eliminar(ArtSeleccionado.ID);
-
-                    cargar();
+                    Close();
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-
+            
         }
-
+        
         private void DgvArticulo_SelectionChanged(object sender, EventArgs e)
         {
             CatalogoImagenes imagen = new CatalogoImagenes();
             Articulos ArtSeleccionado;
-
+            
             ArtSeleccionado = (Articulos)DgvArticulo.CurrentRow.DataBoundItem;
             listarImagenes = imagen.listar(ArtSeleccionado);
             cargarImagen(listarImagenes[0].ImagenURL);
         }
-
+        
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();

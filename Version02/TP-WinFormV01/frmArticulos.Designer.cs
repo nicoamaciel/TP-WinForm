@@ -65,11 +65,11 @@ namespace TP_WinFormV01
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(265, 28);
+            this.label2.Location = new System.Drawing.Point(307, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 25);
+            this.label2.Size = new System.Drawing.Size(109, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Buscar por codigo";
+            this.label2.Text = "Busqueda";
             // 
             // txtArticulos
             // 
@@ -81,7 +81,7 @@ namespace TP_WinFormV01
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(268, 56);
+            this.panel1.Location = new System.Drawing.Point(271, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(181, 1);
             this.panel1.TabIndex = 5;
@@ -113,7 +113,7 @@ namespace TP_WinFormV01
             this.btnListaTdo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListaTdo.FlatAppearance.BorderSize = 0;
             this.btnListaTdo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaTdo.Location = new System.Drawing.Point(652, 10);
+            this.btnListaTdo.Location = new System.Drawing.Point(649, 5);
             this.btnListaTdo.Name = "btnListaTdo";
             this.btnListaTdo.Size = new System.Drawing.Size(46, 39);
             this.btnListaTdo.TabIndex = 9;
@@ -218,7 +218,7 @@ namespace TP_WinFormV01
             this.BtnSalir.FlatAppearance.BorderSize = 0;
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.Location = new System.Drawing.Point(521, 69);
+            this.BtnSalir.Location = new System.Drawing.Point(992, 5);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(119, 49);
             this.BtnSalir.TabIndex = 23;
@@ -249,7 +249,7 @@ namespace TP_WinFormV01
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvBuscarArt);
-            this.MinimumSize = new System.Drawing.Size(774, 584);
+            this.MinimumSize = new System.Drawing.Size(1181, 584);
             this.Name = "frmArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Articulos";

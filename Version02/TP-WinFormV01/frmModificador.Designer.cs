@@ -50,8 +50,11 @@
             // 
             // DgvArticulo
             // 
+            this.DgvArticulo.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.DgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvArticulo.Location = new System.Drawing.Point(3, 58);
+            this.DgvArticulo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DgvArticulo.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.DgvArticulo.Location = new System.Drawing.Point(3, 65);
             this.DgvArticulo.Name = "DgvArticulo";
             this.DgvArticulo.Size = new System.Drawing.Size(743, 62);
             this.DgvArticulo.TabIndex = 1;
@@ -135,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.MenuText;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.BtnEliminar);
@@ -144,7 +147,7 @@
             this.Controls.Add(this.PbxImagen);
             this.Controls.Add(this.DgvArticulo);
             this.Controls.Add(this.CbxArticulos);
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frmModificador";
             this.Text = "frmModificador";
             this.Load += new System.EventHandler(this.frmModificador_Load);
