@@ -60,7 +60,6 @@
             this.CbxArticulos.Name = "CbxArticulos";
             this.CbxArticulos.Size = new System.Drawing.Size(395, 21);
             this.CbxArticulos.TabIndex = 0;
-            this.CbxArticulos.SelectedIndexChanged += new System.EventHandler(this.CbxArticulos_SelectedIndexChanged);
             // 
             // DgvArticulo
             // 
@@ -131,7 +130,6 @@
             this.label1.Size = new System.Drawing.Size(465, 18);
             this.label1.TabIndex = 9;
             this.label1.Text = "Seleccione un Art de la lista y haga click en el boton \"Mostrar Articulo\"";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -162,10 +160,9 @@
             this.label4.ForeColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(81, 29);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 16);
+            this.label4.Size = new System.Drawing.Size(52, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Paso 1:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -174,10 +171,9 @@
             this.label5.ForeColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(967, 180);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 16);
+            this.label5.Size = new System.Drawing.Size(52, 16);
             this.label5.TabIndex = 10;
             this.label5.Text = "Paso 2:";
-            this.label5.Click += new System.EventHandler(this.label4_Click);
             // 
             // BtnModificar
             // 

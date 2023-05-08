@@ -106,8 +106,8 @@ namespace TP_WinFormV01
                 Codigo.Text = articulo.Codigo;
                 Nombre.Text = articulo.Nombre;
                 Descripcion.Text = articulo.Descripcion;
-                CbCategoria.SelectedValue = articulo.Categoria.ID;
-                CbMarca.SelectedValue = articulo.Marca.ID;
+                CbCategoria.SelectedValue = articulo.Categoria.Descripcion;
+                CbMarca.SelectedValue = articulo.Marca.Descripcion;
                 Precio.Text = articulo.Precio.ToString();
             }
         }

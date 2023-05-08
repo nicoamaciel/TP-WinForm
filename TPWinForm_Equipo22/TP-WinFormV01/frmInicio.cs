@@ -19,8 +19,9 @@ namespace TP_WinFormV01
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+
             frmLogin login = new frmLogin();
-            login.Show();
+            login.ShowDialog();
 
         }
 

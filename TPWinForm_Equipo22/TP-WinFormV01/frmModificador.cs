@@ -126,30 +126,10 @@ namespace TP_WinFormV01
             listarImagenes = imagen.listar(ArtSeleccionado);
             cargarImagen(listarImagenes[0].ImagenURL);
         }
-        
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void CbxArticulos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
