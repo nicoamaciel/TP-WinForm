@@ -53,9 +53,13 @@ namespace TP_WinFormV01
             // 
             // dgvBuscarArt
             // 
+            this.dgvBuscarArt.BackgroundColor = System.Drawing.Color.LightSlateGray;
             this.dgvBuscarArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBuscarArt.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvBuscarArt.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvBuscarArt.Location = new System.Drawing.Point(-10, 123);
             this.dgvBuscarArt.Name = "dgvBuscarArt";
+            this.dgvBuscarArt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBuscarArt.Size = new System.Drawing.Size(762, 407);
             this.dgvBuscarArt.TabIndex = 0;
             this.dgvBuscarArt.SelectionChanged += new System.EventHandler(this.dgvBuscarArt_SelectionChanged);
@@ -107,7 +111,7 @@ namespace TP_WinFormV01
             // 
             // btnListaTdo
             // 
-            this.btnListaTdo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnListaTdo.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnListaTdo.BackgroundImage = global::TP_WinFormV01.Properties.Resources.evaluacion;
             this.btnListaTdo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnListaTdo.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -122,12 +126,13 @@ namespace TP_WinFormV01
             // 
             // btnFiltro
             // 
-            this.btnFiltro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(29)))), ((int)(((byte)(29)))));
+            this.btnFiltro.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnFiltro.BackgroundImage = global::TP_WinFormV01.Properties.Resources.lupa;
             this.btnFiltro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFiltro.FlatAppearance.BorderSize = 0;
             this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFiltro.ForeColor = System.Drawing.SystemColors.Control;
             this.btnFiltro.Location = new System.Drawing.Point(457, 49);
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.Size = new System.Drawing.Size(46, 39);
