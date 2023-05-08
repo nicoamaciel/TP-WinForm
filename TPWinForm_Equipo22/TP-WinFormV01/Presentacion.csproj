@@ -168,5 +168,29 @@
   <ItemGroup>
     <None Include="Resources\iconoP.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\documento.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expediente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expediente %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lista-de-verificacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expediente %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dibujo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dibujo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

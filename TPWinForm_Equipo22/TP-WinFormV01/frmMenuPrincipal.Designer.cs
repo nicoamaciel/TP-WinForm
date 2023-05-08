@@ -38,13 +38,13 @@ namespace TP_WinFormV01
             this.optionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.devToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnArticulos = new System.Windows.Forms.Button();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.BtnModEli = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.BtnModEli = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnArticulos = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -118,51 +118,6 @@ namespace TP_WinFormV01
             this.devToolStripMenuItem.Size = new System.Drawing.Size(94, 22);
             this.devToolStripMenuItem.Text = "Dev";
             // 
-            // btnArticulos
-            // 
-            this.btnArticulos.BackgroundImage = global::TP_WinFormV01.Properties.Resources.evaluacion;
-            this.btnArticulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnArticulos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnArticulos.FlatAppearance.BorderSize = 0;
-            this.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArticulos.Location = new System.Drawing.Point(649, 235);
-            this.btnArticulos.Name = "btnArticulos";
-            this.btnArticulos.Size = new System.Drawing.Size(119, 103);
-            this.btnArticulos.TabIndex = 0;
-            this.btnArticulos.UseVisualStyleBackColor = true;
-            this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.BackgroundImage = global::TP_WinFormV01.Properties.Resources.agregar;
-            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(660, 77);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(82, 121);
-            this.btnAgregar.TabIndex = 2;
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
-            // 
-            // BtnModEli
-            // 
-            this.BtnModEli.BackgroundImage = global::TP_WinFormV01.Properties.Resources.CarpetaEliminada;
-            this.BtnModEli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnModEli.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnModEli.FlatAppearance.BorderSize = 0;
-            this.BtnModEli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnModEli.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModEli.Location = new System.Drawing.Point(660, 399);
-            this.BtnModEli.Name = "BtnModEli";
-            this.BtnModEli.Size = new System.Drawing.Size(82, 103);
-            this.BtnModEli.TabIndex = 3;
-            this.BtnModEli.UseVisualStyleBackColor = true;
-            this.BtnModEli.Click += new System.EventHandler(this.BtnModEli_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -192,7 +147,7 @@ namespace TP_WinFormV01
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(810, 439);
+            this.label3.Location = new System.Drawing.Point(810, 425);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(141, 20);
             this.label3.TabIndex = 5;
@@ -208,6 +163,51 @@ namespace TP_WinFormV01
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
+            // 
+            // BtnModEli
+            // 
+            this.BtnModEli.BackgroundImage = global::TP_WinFormV01.Properties.Resources.expediente__2_;
+            this.BtnModEli.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnModEli.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnModEli.FlatAppearance.BorderSize = 0;
+            this.BtnModEli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnModEli.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModEli.Location = new System.Drawing.Point(660, 385);
+            this.BtnModEli.Name = "BtnModEli";
+            this.BtnModEli.Size = new System.Drawing.Size(112, 103);
+            this.BtnModEli.TabIndex = 3;
+            this.BtnModEli.UseVisualStyleBackColor = true;
+            this.BtnModEli.Click += new System.EventHandler(this.BtnModEli_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.BackgroundImage = global::TP_WinFormV01.Properties.Resources.expediente__1_;
+            this.btnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAgregar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(660, 81);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(112, 133);
+            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click_1);
+            // 
+            // btnArticulos
+            // 
+            this.btnArticulos.BackgroundImage = global::TP_WinFormV01.Properties.Resources.lista_de_verificacion;
+            this.btnArticulos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnArticulos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnArticulos.FlatAppearance.BorderSize = 0;
+            this.btnArticulos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArticulos.Location = new System.Drawing.Point(660, 235);
+            this.btnArticulos.Name = "btnArticulos";
+            this.btnArticulos.Size = new System.Drawing.Size(119, 103);
+            this.btnArticulos.TabIndex = 0;
+            this.btnArticulos.UseVisualStyleBackColor = true;
+            this.btnArticulos.Click += new System.EventHandler(this.btnArticulos_Click);
             // 
             // frmMenuPrincipal
             // 
