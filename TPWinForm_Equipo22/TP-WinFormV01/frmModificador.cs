@@ -107,6 +107,7 @@ namespace TP_WinFormV01
                     ArtSeleccionado = (Articulos)DgvArticulo.CurrentRow.DataBoundItem;
                     imagen.eliminar(ArtSeleccionado.ID);
                     negocio.eliminar(ArtSeleccionado.ID);
+                    MessageBox.Show("Articulo Eliminado con Exito");
                     Close();
                 }
             }
