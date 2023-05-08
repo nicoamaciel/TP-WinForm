@@ -30,7 +30,7 @@ namespace TP_WinFormV01
 
                 // Abrir el FormMenu
                 frmMenuPrincipal menuPrincipal = new frmMenuPrincipal();
-                menuPrincipal.Show();
+                menuPrincipal.ShowDialog();
 
 
             }
